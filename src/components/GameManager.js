@@ -7,7 +7,7 @@ const SECOND_PLAYER_CONNECTED_MESSAGE = "SecondPlayerConnectedEvent";
 const ROUND_STARTED_MESSAGE = "RoundStartedEvent";
 const ANSWERS_SUBMITTED_EVENT = "AnswersSubmittedEvent";
 const SCORE_SUBMITTED_EVENT = "ScoreSubmittedEvent";
-const SOCKET_SERVER_URL = "https://scattergories-server.onrender.com:4000";
+const SOCKET_SERVER_URL = "https://scattergories-server.onrender.com";
 
 const GameManager = () => {
     const socketRef = useRef();
