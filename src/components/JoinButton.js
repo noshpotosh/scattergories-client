@@ -24,7 +24,7 @@ function JoinButton() {
         if (CONNECTION_FAILURE_MESSAGES.includes(gameManager.connectionEvent) && errorReason === null) {
             setErrorReason(gameManager.connectionEvent);
         } else if (gameManager.connectionEvent === CONNECTION_SUCCESS_MESSAGE) {
-            navigate("/scattergories-client/" + roomId);
+            navigate("/" + roomId);
         }
 
      }, [gameManager.connectionEvent]);

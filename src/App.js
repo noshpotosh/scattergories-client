@@ -14,8 +14,8 @@ function App() {
     <GameManagerContext.Provider value={gameManager}>
       <Router>
         <Routes>
-          <Route exact path="/scattergories-client" element={ <Home/> } />
-          <Route exact path="/scattergories-client/:roomId" element={ <GameRoom /> } />
+          <Route exact path="/" element={ <Home/> } />
+          <Route exact path="/:roomId" element={ <GameRoom /> } />
         </Routes>
       </Router>
     </GameManagerContext.Provider>

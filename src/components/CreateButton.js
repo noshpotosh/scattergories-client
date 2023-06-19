@@ -13,7 +13,7 @@ function CreateButton() {
         var roomId = (Math.random() + 1).toString(36).substring(7);
         
         gameManager.connectToGameRoom(true, roomId);
-        navigate("/scattergories-client/" + roomId);
+        navigate("/" + roomId);
     }
     
     return (
