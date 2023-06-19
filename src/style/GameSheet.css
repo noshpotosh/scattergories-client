@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+
+.game-sheet {
+    margin-top: calc(30px + 2vmin);
+}
+
+.sheet-form {
+    width: calc(400px + 2vmin);
+    padding-top: calc(5px + 2vmin);
+    padding-bottom: calc(5px + 2vmin);
+    background-color: #FBF5F3;
+    margin-top: calc(5px + 2vmin);
+    text-align: center;
+    border-radius: calc(5px + .25vmin);
+    box-shadow: calc(2px + .25vmin) calc(2px + .25vmin) #F5E4E0;
+    margin: auto;
+}
+
+.round-number {
+    margin-top: 0;
+    font-size: calc(15px + 2vmin);
+    /* text-shadow: calc(2px + .25vmin) calc(2px + .25vmin) black; */
+    color: #220c10;
+    font-family: 'Ranchers', cursive;
+    letter-spacing: calc(1px + .25vmin);
+    margin-bottom: 0;
+}
+
+.sheet-owner {
+    margin-top: 0;
+    font-size: calc(15px + 2vmin);
+    /* text-shadow: calc(1px + .25vmin) calc(1px + .25vmin) black; */
+    color: #220c10;
+    font-family: 'Ranchers', cursive;
+    letter-spacing: calc(1px + .25vmin);
+    margin-bottom: 0;
+}
+
+.sheet-score {
+    margin-top: 0;
+    font-size: calc(10px + 2vmin);
+    /* text-shadow: calc(1px + .25vmin) calc(1px + .25vmin) black; */
+    color: #220c10;
+    font-family: 'Ranchers', cursive;
+    letter-spacing: calc(1px + .25vmin);
+    margin-bottom: 0;
+}
+
+li {
+    font-size: calc(5px + 2vmin);
+    font-family: 'Ranchers', cursive;
+    color: #220c10;
+
+    /* Make text unselectable */
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.answer {
+    resize: none;
+    border: none;
+    background-color: none;
+    background: none;
+    border-bottom: 3px solid #220c10;
+    font-size: calc(5px + 2vmin);
+    font-family: 'Ranchers', cursive;
+    color: #220c10;
+    height: calc(5px + 2vmin);
+    margin-top: calc(5px + 1vmin);
+    overflow: hidden;
+    width: 90%;
+}
+
+.answer:focus {
+    outline: none;
+}
+
+.checkbox {
+    text-align: center;
+    font-family: 'Ranchers', cursive;
+    font-size: calc(5px + 2vmin);
+    height: calc(15px + 2vmin);
+    width: calc(15px + 2vmin);
+}
+
+.uneditable-true {
+    pointer-events: none;
+}
+
+.disputed-true {
+    text-decoration: line-through;
+    text-decoration-color: black;
+    text-decoration-thickness: calc(1px + .5vmin);
+}
+
+.sheet-logo {
+    width: 20%;
+    /* box-shadow: calc(1px + .25vmin) calc(1px + .25vmin) black; */
+    border-radius: calc(1px + 1vmin);
+}
+
+@media screen and (max-width: 860px) {
+    li {
+        font-size: calc(5px + 2vmax);
+    }
+
+    .answer {
+        font-size: calc(1px + 2vmax);
+        height: calc(3px + 2vmax);
+    }
+}
+
+@media screen and (max-height: 860px) {
+    li {
+        font-size: calc(5px + 2vmax);
+    }
+
+    .answer {
+        font-size: calc(1px + 2vmax);
+        height: calc(3px + 2vmax);
+    }
+}

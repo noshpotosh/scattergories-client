@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+
+.score-screen {
+    justify-content: center;
+    text-align: center;
+}
+
+.start-round {
+    margin-top: calc(20px + 2vmin);
+    width: calc(230px + 2vmin);
+    height: calc(50px + 2vmin);
+    font-size: calc(7px + 2vmin);
+    border-radius: calc(5px + .25vmin);
+    background-color: #EA484E;
+    box-shadow: calc(2px + .25vmin) calc(2px + .25vmin) #E5242A;
+    border: none;
+    color: #FBF5F3;
+    font-family: 'Ranchers', cursive;
+}
+
+.info-message {
+    font-size: calc(4px + 2vmin);
+    color: #F5E4E0;
+    font-weight: bold;;
+    text-shadow: calc(2px + .25vmin) calc(2px + .25vmin) black;
+    font-family: 'Ranchers', cursive;
+    letter-spacing: calc(1px + .05vmin);
+}
+
+.showMessage-false{
+    opacity: 0;
+}
+
+.showMessage-true {
+    opacity: 100;
+}

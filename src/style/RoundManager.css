@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+
+.round-container {
+    justify-content: center;
+    text-align: center;
+}
+
+.round-info {
+    border-radius: calc(5px + .25vmin);
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    box-shadow: calc(4px + .25vmin) calc(4px + .25vmin) #04B8DC;
+    background-color: #76E5FC;
+    align-items: center;
+    padding-left: calc(5px + 1vmin);
+    padding-right: calc(5px + 1vmin);
+}
+
+.round-topic {
+    margin-top: calc(10px + 15vmin);
+    font-size: calc(10px + 2vmin);
+    /* text-shadow: calc(4px + .25vmin) calc(4px + .25vmin) black; */
+    color: #220c10;
+    font-family: 'Ranchers', cursive;
+    letter-spacing: calc(1px + .25vmin);
+    margin-bottom: calc(1px + 1vmin);
+}
+
+.round-letter {
+    font-size: calc(10px + 2vmin);
+    /* text-shadow: calc(4px + .25vmin) calc(4px + .25vmin) black; */
+    color: #220c10;
+    font-family: 'Ranchers', cursive;
+    letter-spacing: calc(1px + .25vmin);
+    margin-top: 0;
+}

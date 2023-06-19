@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+
+.join-container {
+    text-align: center;
+    justify-content: center;
+}
+
+.inputs-wrapper {
+    width: calc(300px + 2vmin);
+    padding-top: calc(5px + 2vmin);
+    padding-bottom: calc(5px + 2vmin);
+    background-color: #FBF5F3;
+    margin-top: calc(5px + 2vmin);
+    text-align: center;
+    border-radius: calc(5px + .25vmin);
+    box-shadow: calc(2px + .25vmin) calc(2px + .25vmin) #F5E4E0;
+    margin: auto;
+}
+
+.join-input {
+    width: calc(225px + 2vmin);
+    margin: auto;
+    height: calc(50px + 2vmin);
+    text-align: center;
+    font-size: calc(5px + 2vmin);
+    border-radius: calc(5px + .25vmin);
+    border: calc(1px + .25vmin) solid #C8C8D0;
+    color: #220c10;
+    font-family: 'Ranchers', cursive;
+}
+
+.join-input::placeholder {
+    color: #C8C8D0;
+    font-family: 'Ranchers', cursive;
+}
+
+.join-input:focus {
+    outline: none;
+}
+
+.join-button {
+    width: calc(230px + 2vmin);
+    margin: auto;
+    height: calc(50px + 2vmin);
+    margin-top: calc(1px + 1vmin);
+    font-size: calc(7px + 2vmin);
+    border-radius: calc(5px + .25vmin);
+    background-color: #76E5FC;
+    box-shadow: calc(2px + .25vmin) calc(2px + .25vmin) #04B8DC;
+    border: none;
+    color: #220c10;
+    font-family: 'Ranchers', cursive;
+}
+
+.join-button:hover {
+    cursor: pointer;
+}
+
+.error-message {
+    font-size: calc(2px + 2vmin);
+    color: #F5E4E0;
+    font-weight: bold;;
+    text-shadow: calc(2px + .25vmin) calc(2px + .25vmin) black;
+    font-family: 'Ranchers', cursive;
+    letter-spacing: calc(1px + .05vmin);
+}

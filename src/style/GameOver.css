@@ -1,0 +1,58 @@
+.game-over-container {
+    text-align: center;
+}
+
+.game-summary {
+    background-color: #76E5FC;
+    box-shadow: calc(2px + .25vmin) calc(2px + .25vmin) #04B8DC;
+    border-radius: calc(5px + .25vmin);
+    padding: calc(5px + .25vmin);
+    padding-left: calc(15px + .25vmin);
+    padding-right: calc(15px + .25vmin);
+}
+
+.game-over {
+    font-size: calc(30px + 2vmin);
+    text-shadow: calc(4px + .25vmin) calc(4px + .25vmin) black;
+    color: #F5E4E0;
+    font-family: 'Ranchers', cursive;
+    letter-spacing: calc(1px + .25vmin);
+}  
+
+.your-total-score {
+    font-size: calc(10px + 2vmin);
+    /* text-shadow: calc(4px + .25vmin) calc(4px + .25vmin) black; */
+    color: #220c10;
+    font-family: 'Ranchers', cursive;
+    letter-spacing: calc(1px + .25vmin);
+}
+
+.opponent-total-score {
+    font-size: calc(10px + 2vmin);
+    /* text-shadow: calc(4px + .25vmin) calc(4px + .25vmin) black; */
+    color: #220c10;
+    font-family: 'Ranchers', cursive;
+    letter-spacing: calc(1px + .25vmin);
+}
+
+.game-outcome {
+    font-size: calc(10px + 2vmin);
+    /* text-shadow: calc(4px + .25vmin) calc(4px + .25vmin) black; */
+    color: #220c10;
+    font-family: 'Ranchers', cursive;
+    letter-spacing: calc(1px + .25vmin);
+}
+
+.exit-game {
+    height: calc(50px + 2vmin);
+    width: calc(225px + 2vmin);
+    border-radius: calc(5px + .25vmin);
+    outline: none;
+    border: none;
+    box-shadow: calc(2px + .25vmin) calc(2px + .25vmin) #E5242A;
+    font-size: calc(7px + 2vmin);
+    margin-top: calc(50px + 2vmin);
+    background-color: #EA484E;
+    color: #FBF5F3;
+    font-family: 'Ranchers', cursive;
+}

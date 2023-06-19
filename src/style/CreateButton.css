@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+
+.create-container {
+    margin-top: 0;
+}
+
+.create-button {
+    height: calc(50px + 2vmin);
+    width: calc(225px + 2vmin);
+    border-radius: calc(5px + .25vmin);
+    outline: none;
+    border: none;
+    box-shadow: calc(2px + .25vmin) calc(2px + .25vmin) #E5242A;
+    font-size: calc(7px + 2vmin);
+
+    margin-top: calc(50px + 2vmin);
+
+    background-color: #EA484E;
+    color: #FBF5F3;
+    font-family: 'Ranchers', cursive;
+}
+
+.create-button:hover {
+    cursor: pointer;
+}
