@@ -16,15 +16,15 @@ function JoinButton() {
     const CONNECTION_FAILURE_MESSAGES = [ ("Room Cannot Be Joined: " + roomId + " is already full..."), ("Failed To Join: " + roomId + " does not exist...")];
 
     useEffect(() => {
-        if (gameManager.connectionEvent == null) {
+        if (gameManager.connectionEvent === null) {
             return;
         }
         
         // If there is an error in the game manager, display the error message and prevent navigation to the room.
-        if (CONNECTION_FAILURE_MESSAGES.includes(gameManager.connectionEvent) && errorReason == null) {
+        if (CONNECTION_FAILURE_MESSAGES.includes(gameManager.connectionEvent) && errorReason === null) {
             setErrorReason(gameManager.connectionEvent);
-        } else if (gameManager.connectionEvent == CONNECTION_SUCCESS_MESSAGE) {
-            navigate("/" + roomId);
+        } else if (gameManager.connectionEvent === CONNECTION_SUCCESS_MESSAGE) {
+            navigate("/scattergories-client/" + roomId);
         }
 
      }, [gameManager.connectionEvent]);

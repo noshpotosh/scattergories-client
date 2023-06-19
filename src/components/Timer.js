@@ -24,7 +24,7 @@ const Timer = (props) => {
     }, []);
 
     useEffect(() => {
-        if (seconds == -1 && minutes == -1) {
+        if (seconds === -1 && minutes === -1) {
             props.setIsTimeUp(true);
         }
     }, [seconds]);
