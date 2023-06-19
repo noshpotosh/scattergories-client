@@ -25,11 +25,11 @@ function GameRoom() {
     const [showRoundResults, setShowRoundResults] = useState(false);
 
     const isRoundstarted = showGameElements;
-    const isFirstRound = currentRoundNumber == 1;
+    const isFirstRound = currentRoundNumber === 1;
     const gameOver = currentRoundNumber > 3 && !showRoundResults;
 
     useEffect(() => {
-        if (gameManager.secondPlayerConnectedEvent == null) {
+        if (gameManager.secondPlayerConnectedEvent === null) {
             return;
         }
 
@@ -37,7 +37,7 @@ function GameRoom() {
     }, [gameManager.secondPlayerConnectedEvent]);
 
     useEffect(() => {
-        if (gameManager.roundStartedEvent == null) {
+        if (gameManager.roundStartedEvent === null) {
             return;
         }
         setTopic(gameManager.roundStartedEvent.split(":")[0]);

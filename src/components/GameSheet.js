@@ -34,15 +34,15 @@ const GameSheet = (props) => {
     }
 
     const getRoundString = () => {
-        if (props.currentRound == 1) {
+        if (props.currentRound === 1) {
             return "One";
         }
 
-        if (props.currentRound == 2) {
+        if (props.currentRound === 2) {
             return "Two";
         }
 
-        if (props.currentRound == 3) {
+        if (props.currentRound === 3) {
             return "Three";
         }
     }
@@ -78,7 +78,7 @@ const GameSheet = (props) => {
                 // Set answer as not disputed
                 newDisputes[i] = false;
                 
-                if (splitAnswer.length > 1 && splitAnswer[0].charAt(0).toLowerCase() == splitAnswer[1].charAt(0).toLowerCase()) {
+                if (splitAnswer.length > 1 && splitAnswer[0].charAt(0).toLowerCase() === splitAnswer[1].charAt(0).toLowerCase()) {
                     currentScore = currentScore + 2;
                 } else {
                     currentScore++;
@@ -111,7 +111,7 @@ const GameSheet = (props) => {
         const currentCheckBoxAnswer = answers[currentCheckBoxIndex].split(" ");
 
         // Empty answer, cannot be disputed
-        if (currentCheckBoxAnswer[0] == "") {
+        if (currentCheckBoxAnswer[0] === "") {
             return;
         }
 
@@ -129,14 +129,14 @@ const GameSheet = (props) => {
 
         if (newDisputes[currentCheckBoxIndex]) {
             // Two words with the same letter, double points
-            if (currentCheckBoxAnswer.length > 1 && currentCheckBoxAnswer[0].charAt(0).toLowerCase() == currentCheckBoxAnswer[1].charAt(0).toLowerCase()) {
+            if (currentCheckBoxAnswer.length > 1 && currentCheckBoxAnswer[0].charAt(0).toLowerCase() === currentCheckBoxAnswer[1].charAt(0).toLowerCase()) {
                 props.setScore(props.score - 2);
             } else {
                 props.setScore(props.score - 1);
             }
         } else if (!newDisputes[currentCheckBoxIndex]) {
             // Two words with the same letter, double points
-            if (currentCheckBoxAnswer.length > 1 && currentCheckBoxAnswer[0].charAt(0).toLowerCase() == currentCheckBoxAnswer[1].charAt(0).toLowerCase()) {
+            if (currentCheckBoxAnswer.length > 1 && currentCheckBoxAnswer[0].charAt(0).toLowerCase() === currentCheckBoxAnswer[1].charAt(0).toLowerCase()) {
                 props.setScore(props.score + 2);
             } else {
                 props.setScore(props.score + 1);
@@ -147,11 +147,11 @@ const GameSheet = (props) => {
     const isSameAnswerAsOpponent = (answerToCheck) => {
         for (let i = 0; i < playerTwoAnswers.length; i++) {
             if (isPlayerOneResults) {
-                if (answerToCheck.toLowerCase() == playerTwoAnswers[i].toLowerCase()) {
+                if (answerToCheck.toLowerCase() === playerTwoAnswers[i].toLowerCase()) {
                     return true;
                 }
             } else {
-                if (answerToCheck.toLowerCase() == playerOneAnswers[i].toLowerCase()) {
+                if (answerToCheck.toLowerCase() === playerOneAnswers[i].toLowerCase()) {
                     return true;
                 }
             }

@@ -54,7 +54,7 @@ const ScoreScreen = (props) => {
 
     return (
         <div>
-            {messagesRecieved == 2 ? 
+            {messagesRecieved === 2 ? 
                 <div className="score-screen">
                     <div className="round-info">
                         <h2 className="round-topic">Topic: {props.topic}</h2> 
