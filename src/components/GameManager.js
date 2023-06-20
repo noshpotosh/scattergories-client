@@ -32,8 +32,7 @@ const GameManager = () => {
         }
 
         socketRef.current = socketIOClient(SOCKET_SERVER_URL, {
-            transports: ["websocket"],
-            query: { roomId, isNewRoom },
+            query: { roomId, isNewRoom }
         });
 
         socketRef.current.on(GAME_EVENT_MESSAGE, (message) => {
