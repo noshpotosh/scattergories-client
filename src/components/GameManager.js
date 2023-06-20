@@ -32,10 +32,7 @@ const GameManager = () => {
         }
 
         socketRef.current = socketIOClient(SOCKET_SERVER_URL, {
-            withCredentials: true,
-            extraHeaders: {
-                "my-custom-header": "abcd"
-            },
+            transports: ["websocket"],
             query: { roomId, isNewRoom },
         });
 
