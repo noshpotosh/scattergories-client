@@ -94,7 +94,7 @@ li {
 .disputed-true {
     text-decoration: line-through;
     text-decoration-color: black;
-    text-decoration-thickness: calc(1px + .5vmin);
+    text-decoration-thickness: calc(5px + .5vmin);
 }
 
 .sheet-logo {
