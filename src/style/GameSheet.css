@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
 
 .game-sheet {
-    margin-top: calc(30px + 2vmin);
+    width: 90%;
+    margin: auto;
+    margin-top: calc(10px + 2vmin);
 }
 
 .sheet-form {
-    width: calc(400px + 2vmin);
     padding-top: calc(5px + 2vmin);
     padding-bottom: calc(5px + 2vmin);
     background-color: #FBF5F3;
     margin-top: calc(5px + 2vmin);
     text-align: center;
     border-radius: calc(5px + .25vmin);
-    box-shadow: calc(2px + .25vmin) calc(2px + .25vmin) #F5E4E0;
+    box-shadow: calc(4px + .25vmin) calc(4px + .25vmin) #F5E4E0;
     margin: auto;
 }
 
@@ -122,4 +123,8 @@ li {
         font-size: calc(1px + 2vmax);
         height: calc(3px + 2vmax);
     }
+}
+
+@media screen and (min-width: 650px) {
+
 }

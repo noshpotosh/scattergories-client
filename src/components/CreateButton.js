@@ -10,7 +10,7 @@ function CreateButton() {
     const navigate = useNavigate();
 
     const createGameRoom = () => {
-        var roomId = (Math.random() + 1).toString(36).substring(7);
+        var roomId = (Math.random() + 1).toString(36).substring(7).toLowerCase();
         
         gameManager.connectToGameRoom(true, roomId);
         navigate("/" + roomId);

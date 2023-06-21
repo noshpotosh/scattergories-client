@@ -15,10 +15,10 @@
     align-items: center;
     padding-left: calc(5px + 1vmin);
     padding-right: calc(5px + 1vmin);
+    width: 90%;
 }
 
 .round-topic {
-    margin-top: calc(10px + 15vmin);
     font-size: calc(10px + 2vmin);
     /* text-shadow: calc(4px + .25vmin) calc(4px + .25vmin) black; */
     color: #220c10;
