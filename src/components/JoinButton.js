@@ -35,7 +35,7 @@ function JoinButton() {
 
     const handleRoomNameChange = (event) => {
         // Set the value of the input field to whatever was typed by the user.
-        setRoomId(event.target.value);
+        setRoomId(event.target.value.toLowerCase());
         
         // Reset the error values when the user enters a new room name.
         setErrorReason(null);

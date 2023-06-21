@@ -63,6 +63,7 @@ li {
 .answer {
     resize: none;
     border: none;
+    border-radius: 0;
     background-color: none;
     background: none;
     border-bottom: 3px solid #220c10;
@@ -94,7 +95,7 @@ li {
 .disputed-true {
     text-decoration: line-through;
     text-decoration-color: black;
-    text-decoration-thickness: calc(5px + .5vmin);
+    text-decoration-thickness: calc(3px + .5vmax);
 }
 
 .sheet-logo {
