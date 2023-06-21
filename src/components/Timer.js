@@ -8,7 +8,7 @@ const Timer = (props) => {
     const [seconds, setSeconds] = useState(0);
 
     const startTime = new Date();
-    const endTime = new Date(startTime.getTime() + (3 * 60500) * 100000000);
+    const endTime = new Date(startTime.getTime() + (3 * 60500));
 
     const getTime = () => {
         const time = endTime - Date.now();
