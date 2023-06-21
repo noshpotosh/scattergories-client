@@ -9,6 +9,7 @@ function Home() {
 
   return (
     <div className="home">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" />
       <div className="home-body">
         <div className="title-wrapper">
           <img className="title-logo" src="https://play-lh.googleusercontent.com/fdg7CSbIxPIFbL9SHfgJpmZgVHXtPZFhidOCvHwIJYzzHJc19xY93FXQzW6wdwGyLpc"></img>

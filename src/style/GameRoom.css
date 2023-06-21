@@ -12,9 +12,10 @@
 
 .room-name {
     position: absolute;
-    top: 0;
+    top: 5vh;
+    margin: auto;
     letter-spacing: calc(1px + 1vmin);
-    font-size: calc(50px + 2vmin);
+    font-size: calc(2rem + 4vmin);
     font-family: 'Ranchers', cursive;
     text-shadow: calc(8px + .25vmin) calc(8px + .25vmin) black;
     color: #ea484e;
