@@ -29,6 +29,7 @@ function GameRoom() {
     const gameOver = currentRoundNumber > 3 && !showRoundResults;
 
     useEffect(() => {
+        // Prevent setting second player connected on first render
         if (gameManager.secondPlayerConnectedEvent === null) {
             return;
         }
@@ -37,12 +38,14 @@ function GameRoom() {
     }, [gameManager.secondPlayerConnectedEvent]);
 
     useEffect(() => {
+        // Prevent setting round started on first render
         if (gameManager.roundStartedEvent === null) {
             return;
         }
         setTopic(gameManager.roundStartedEvent.split(":")[0]);
         setLetter(gameManager.roundStartedEvent.split(":")[1]);
 
+        // Reset display booleans for new round started
         setShowRoundResults(false);
         setIsTimeUp(false);
         setShowGameElements(true);
@@ -54,13 +57,22 @@ function GameRoom() {
         }
     }, [isTimeUp]);
 
-    const startRound = () => {
+    const getRandomTopic = () => {
         var max = topics.Categories.length;
         var min = 0;
-        var ROUND_STARTED_MESSAGE = topics.Categories.at(Math.random() * (max - min) + min) + ":" + String.fromCharCode(65+Math.floor(Math.random() * 26));
+
+        return topics.Categories.at(Math.random() * (max - min) + min);
+    };
+
+    const getRandomTopicLetter = () => {
+        return String.fromCharCode(65 + Math.floor(Math.random() * 26));
+    };
+
+    const startRound = () => {
+        var ROUND_STARTED_MESSAGE = getRandomTopic() + ":" + getRandomTopicLetter();
         
         gameManager.sendEventMessage("RoundStartedEvent", ROUND_STARTED_MESSAGE);
-    }
+    };
 
     return (
         <div className="GameRoom-body">

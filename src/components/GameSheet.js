@@ -25,27 +25,30 @@ const GameSheet = (props) => {
     const handleNewAnswer = (event) => {
         const newAnswers = [...answers];
 
+        // Add new answer to answers array
         for (let i = 0; i < newAnswers.length; i++) {
             if (event.target.id === "answer" + i) {
                 newAnswers[i] = event.target.value;
                 setAnswers(newAnswers);
             }
         }
-    }
+    };
 
     const getRoundString = () => {
-        if (props.currentRound === 1) {
-            return "One";
-        }
+        switch (props.currentRound) {
+            case 1:
+                return "Round 1";
 
-        if (props.currentRound === 2) {
-            return "Two";
-        }
+            case 2: 
+                return "Round 2";
 
-        if (props.currentRound === 3) {
-            return "Three";
+            case 3: 
+                return "Round 3";
+
+            default:
+                break;
         }
-    }
+    };
 
     const submitAnswers = () => {
         gameManager.sendEventMessage("AnswersSubmittedEvent", answers);
@@ -105,7 +108,6 @@ const GameSheet = (props) => {
             return;
         }
 
-
         const newDisputes = [...disputes];
         const currentCheckBoxIndex = event.target.id.split("dispute")[1];
         const currentCheckBoxAnswer = answers[currentCheckBoxIndex].split(" ");
@@ -120,13 +122,16 @@ const GameSheet = (props) => {
             return;
         }
 
+        // Answer is the same as an answer from player two, cannot be disputed or undisputed
         if (isSameAnswerAsOpponent(answers[currentCheckBoxIndex])) {
             return;
         }
 
+        // Change selected answer's disputed status
         newDisputes[currentCheckBoxIndex] = !newDisputes[currentCheckBoxIndex];
         setDisputes(newDisputes);
 
+        // Adjust points for disputed or undisputed answer
         if (newDisputes[currentCheckBoxIndex]) {
             // Two words with the same letter, double points
             if (currentCheckBoxAnswer.length > 1 && currentCheckBoxAnswer[0].charAt(0).toLowerCase() === currentCheckBoxAnswer[1].charAt(0).toLowerCase()) {
@@ -142,9 +147,10 @@ const GameSheet = (props) => {
                 props.setScore(props.score + 1);
             }
         }
-    }
+    };
 
     const isSameAnswerAsOpponent = (answerToCheck) => {
+       // Check if answer is the same as answer from a different player
         for (let i = 0; i < playerTwoAnswers.length; i++) {
             if (isPlayerOneResults) {
                 if (answerToCheck.toLowerCase() === playerTwoAnswers[i].toLowerCase()) {

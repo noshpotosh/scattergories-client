@@ -52,10 +52,12 @@ const GameManager = () => {
                     break;
                     
                 case ROUND_STARTED_MESSAGE:
+                    // Reset score and submission events for start of new round
                     setPlayerOneScoreEvent(null);
                     setPlayerTwoScoreEvent(null);
                     setPlayerOneSubmittedEvent(null);
                     setPlayerTwoSubmittedEvent(null);
+
                     setRoundStartedEvent(incomingMessage.body);
                     break;
 
@@ -99,13 +101,13 @@ const GameManager = () => {
         setRoomId(roomdId);
 
         return connectionEvent;
-    }
+    };
 
     return { 
         connectToGameRoom, roomId, sendEventMessage, connectionEvent, 
         secondPlayerConnectedEvent, roundStartedEvent, playerOneSubmittedEvent, playerTwoSubmittedEvent,
         playerOneScoreEvent, playerTwoScoreEvent
     };
-}
+};
 
 export default GameManager;

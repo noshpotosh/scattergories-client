@@ -9,18 +9,23 @@ function CreateButton() {
     const gameManager = useContext(GameManagerContext);
     const navigate = useNavigate();
 
+    const generateRandomRoomId = () => {
+        return (Math.random() + 1).toString(36).substring(7).toLowerCase();
+    };
+
     const createGameRoom = () => {
-        var roomId = (Math.random() + 1).toString(36).substring(7).toLowerCase();
+        var roomId = generateRandomRoomId();
+        var isNewRoom = true;
         
-        gameManager.connectToGameRoom(true, roomId);
+        gameManager.connectToGameRoom(isNewRoom, roomId);
         navigate("/" + roomId);
-    }
+    };
     
     return (
         <div className="create-container">
             <button className="create-button" onClick={createGameRoom}>Create Room</button>
         </div>
     );
-}
+};
 
 export default CreateButton;

@@ -17,6 +17,7 @@ const ScoreScreen = (props) => {
     };
 
     useEffect(() => {
+        // Prevent setting recieved message on first render
         if (!gameManager.playerOneSubmittedEvent && !gameManager.playerTwoSubmittedEvent) {
             return;
         }
@@ -25,27 +26,29 @@ const ScoreScreen = (props) => {
     }, [gameManager.playerOneSubmittedEvent, gameManager.playerTwoSubmittedEvent]);
 
     useEffect(() => {
+        // No players submitted, wait
         if (!gameManager.playerOneScoreEvent && !gameManager.playerTwoScoreEvent) {
             return;
         }
 
+        // If player one not submitted, wait
         if (!gameManager.playerOneScoreEvent) {
             return;
         }
 
-        // If only one score submitted, wait.
+        // If player two not submitted, wait
         if (!gameManager.playerTwoScoreEvent) {
             setInfoMessage("Waiting for opponent's score sheet to be submitted...");
             return;
         }
 
-        // If both scores submitted, check that scores are equal. Have to reverse the scores to make sure they are the same.
+        // If both scores submitted, check that scores are equal. Have to reverse the scores to make sure they are the same
         if (gameManager.playerOneScoreEvent != gameManager.playerTwoScoreEvent.split("").reverse().join("")) {
             setInfoMessage("Submitted score sheets are not equal. Please coordinate your scoring and resubmit.");
             return;
         }
 
-        // Scores are equal, start next round.
+        // Scores are equal, start next round
         props.setPlayerOneTotalScore(props.playerOneTotalScore + playerOneScore);
         props.setPlayerTwoTotalScore(props.playerTwoTotalScore + playerTwoScore);
         props.startRound();

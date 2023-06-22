@@ -21,7 +21,7 @@ const GameOver = (props) => {
     const exitGameRoom = () => {
         navigate("/");
         window.location.reload();
-    }
+    };
 
     return (
         <div className="game-over-container">
